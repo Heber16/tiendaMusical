@@ -23,7 +23,7 @@ public interface PersonaDAO extends PagingAndSortingRepository<Persona, Long>{
 	 * @param password {@link String} contraseña capturada por la persona
 	 * return {@link Persona} objeto con la persona encontrada
 	 */
-	@Query("SELECT p FROM Persona p WHERE P.usuario = ?1")
+	@Query("SELECT p FROM Persona p WHERE p.usuario = ?1 AND p.password = ?2")
 	Persona findByUsuarioAndPassword(String usuario, String password);
 
 }
