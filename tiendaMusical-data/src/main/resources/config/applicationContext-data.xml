@@ -38,7 +38,7 @@
 	<!-- :::::::::::::::::::::: BEAN QUE SE ENCARGA DE ADMINISTRAR Y REGISTRAR 
 		LOS ENTITIES DE JPA Y SUS PROPIEDADES -->
 	<bean id="entityManagerFactory"
-		class="org.springFramework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="packagesToScan"
 			value="com.buenmaestro.tiendaMusicalentities.entities"></property>
@@ -69,6 +69,6 @@
 	<!-- :::::::::::::::::::::: ETIQUETA QUE PERMITE REGISTRAR LAS CLASES QUE 
 		SE ENCARGAN DE EJECUTAR TRANSACCIONES -->
 	<jpa:repositories
-		base-package="com.buenmaestro.tiendaMusicaldata.repositories"
+		base-package="com.buenmaestro.tiendaMusicaldata.dao"
 		entity-manager-factory-ref="entityManagerFactory"></jpa:repositories>
 </beans>
